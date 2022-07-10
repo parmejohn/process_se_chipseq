@@ -1,20 +1,22 @@
 # Simple pipeline for processing mice single-end, no input, ChIP-seq data
 
-Usage
+## Usage
 
 ```
 ./process_chipseq.sh [reference].fa.gz [output folder]
 ```
 
-Note that the there needs to be a SRR_ACC_List.txt file located in the output folder, which denotes the desired SRR numbers wanted
+**Note** that the there needs to be a SRR_Acc_List.txt file located in the output folder, which denotes the desired SRR accession numbers for the ChIP-seq files wanted. An example of this can be found in the ../chipseq/ folder.
 
-Example
-If I were to download the mm10 reference, and place it in a references folder
+Also, after downloading and running FastQC and MultiQC on the desired files, the script will stop until the Enter button is pressed, in order to give time for the user to check the QC metrics.
+
+### Example
+If the reference were mm10 and the output folder was ../chipseq/ with a SRR_Acc_List.txt for B-cell and T-cell H3K27ac ChIP-seq data (Lara-Astiaso et al. 2014; GSE59636).
 ```
-./process_chipseq.sh */references/mm10.fa.gz */chipseq/
+./process_chipseq.sh path_to_file/mm10.fa.gz path_to_folder/chipseq/
 ```
 
-Dependencies
+## Dependencies
 - sra-tools                 2.11.0
 - samtools                  1.15.1
 - picard                    2.27.4
@@ -23,9 +25,13 @@ Dependencies
 - bwa                       0.7.17
 - macs2                     2.2.7.1
 
+## Conda Installation
 To easily install these dependencies with anaconda, use the following commands
 ```
 conda env create -f environment.yml
 conda activate process_chipseq
 ```
-And then run the command
+and then feel free to run the script
+
+## References
+Lara-Astiaso D, Weiner A, Lorenzo-Vivas E, Zaretsky I, Jaitin DA, David E, Keren-Shaul H, Mildner A, Winter D, Jung S, Friedman N, Amit I. 2014. Chromatin state dynamics during blood formation. Science 345:943–949.
