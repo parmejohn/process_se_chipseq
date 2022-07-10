@@ -1,0 +1,9 @@
+name: process_chipseq
+dependencies:
+- sra-tools
+- bwa
+- fastqc
+- multiqc
+- samtools
+- picard
+- macs2
