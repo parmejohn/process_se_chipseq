@@ -77,7 +77,7 @@ done
 ### flagstat
 for FILE in $no_input/*.sorted.dupsMarked.bam;do
 	x=${FILE##*/};
-	samtools flagstat -@ $t $FILE > $output/${l2}/${x%}.flagstat;
+	samtools flagstat -@ $t $FILE > $output/${x%}.flagstat;
 done
 
 ### remove intermediate files
