@@ -5,7 +5,7 @@
 ### hard coded path
 mm10reference=${1}
 
-### change output file to where u have the SRR_ACC_List stored
+### change output file to where you have the SRR_ACC_List stored
 ### this will also be the location of all the output files
 output=${2}
 

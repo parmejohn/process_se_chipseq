@@ -12,6 +12,8 @@ Also, after downloading and running FastQC and MultiQC on the desired files, the
 
 ### Example
 If the reference were mm10 and the output folder was ../chipseq/ with an SRR_Acc_List.txt for B-cell and T-cell H3K27ac ChIP-seq data (Lara-Astiaso et al. 2014; GSE59636).
+
+**Note** The absolute path must be used.
 ```
 ./process_chipseq.sh path_to_file/mm10.fa.gz path_to_folder/chipseq/
 ```
