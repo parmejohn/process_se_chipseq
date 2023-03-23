@@ -1,4 +1,4 @@
-# Simple pipeline for processing mice, single-end, no input, ChIP-seq data
+# Simple script for processing mice, single-end, no input, ChIP-seq data
 
 ## Usage
 
